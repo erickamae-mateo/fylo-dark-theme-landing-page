@@ -1,0 +1,51 @@
+  .testimonial{
+
+        background-color: $darkMain;
+        padding-top: 50px;
+        padding-bottom: 200px;
+
+      &-grid{
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 30px;  
+
+         @include breakpoints-up(medium){
+         grid-template-columns: repeat(3, 1fr);
+        }
+
+      }
+        .testimonial-card {
+          background-color: $darkTesti;
+          border-radius: 5px;
+          overflow: hidden;
+
+          padding: 30px;
+          max-width: 25rem;
+          height: 100%;
+          margin: 0 auto;
+          transition: transform 150ms ease-in-out;
+
+            &:hover {
+              transform: scale(1.05); 
+            }
+         }
+
+         .testimony-profile{
+
+          display: flex;
+          align-items: center;
+
+          .testimony-image img{
+            width: 3rem;
+            border-radius: 50%;
+          }
+          .testimony-profile-text{
+            margin-left: 25px;
+          }
+
+          .testimony-name{
+            font-weight: 900;
+          }
+  
+         }
+  }

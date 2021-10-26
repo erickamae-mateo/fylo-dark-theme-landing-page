@@ -1,0 +1,55 @@
+.hero{
+  text-align: center;
+
+  img{
+    height: auto;
+    max-width: 100%;
+  }
+
+  &_image{
+
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 280px;
+    margin-top: 80px;
+  }
+
+  &_text{
+    text-align: center;
+    h1{
+      margin-top: 20px;
+    }
+
+    p{
+      @include breakpoints-up(large){
+        padding: 0 200px;
+      }
+    }
+  }
+}
+
+.hero_backdrop{
+  position:absolute;
+  background-size: max(50%, 400px);
+  background-repeat: no-repeat;
+  background-position: center;
+    z-index: -1;
+  left: 0;
+  right: 0;
+  top: 47%;
+
+  @include breakpoints-up(xsm){
+    top: 57%;
+  }
+
+  @include breakpoints-up(fixed){
+    top: 68%;
+  }
+
+
+  @include breakpoints-up(medium){
+    top: 125%;
+  }
+}

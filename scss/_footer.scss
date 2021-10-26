@@ -1,0 +1,94 @@
+.footer{
+  background: $darkFooter;
+
+  a{
+    color: $white;
+    margin-bottom: 1rem;
+
+    &:hover{
+      font-weight:900;
+    }
+  }
+
+  &-logo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &-content{
+    @include breakpoints-up(large){
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "address contact links1 links2 social";
+    gap: 1rem;
+    justify-items: start;
+    }
+  }
+
+  &-icon{
+    margin-right: 20px;
+  }
+  .address{
+    @include breakpoints-up(medium){
+      grid-area: address;
+    }
+  }
+  .contact{
+    margin-bottom: 30px;
+
+    .footer-content-number{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      @include breakpoints-up(medium){
+        margin-top: 0;
+      }
+    }
+    @include breakpoints-up(medium){
+      grid-area: contact;
+    }
+  }
+
+  .footer-links1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    @include breakpoints-up(medium){
+      grid-area: links1;
+      margin:0 auto;
+    }
+  }
+
+  .footer-links2 {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints-up(medium){
+      grid-area: links2;
+      margin:0 auto;
+    
+    }
+  }
+
+  .footer-social {
+    text-align: center;
+    padding-bottom: 20px;
+
+    a{
+      margin-right:10px;
+    }
+
+    svg{
+    border: 1px solid #ffffff; 
+    border-radius: 50px;
+
+      &:hover{
+        fill: $white;
+        }
+    }
+    @include breakpoints-up(medium){
+      grid-area: social;
+    }
+  }
+}

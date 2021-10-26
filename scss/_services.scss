@@ -1,0 +1,58 @@
+
+.services{
+  background-color: $darkMain;
+  margin-top: -66%;
+
+  @include breakpoints-up(xsm){
+      margin-top: -47%;
+    }
+
+  @include breakpoints-up(medium){
+      margin-top: -8%;
+    }
+
+    @include breakpoints-up(large){
+      margin-top: 10%;
+    }
+
+}
+
+  .services_offer{
+    background-color: $darkMain;
+    text-align: center;
+      padding-top:360px;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 150px;
+
+    @include breakpoints-up(medium){
+      padding: 30px 155px;
+    }
+
+    .services_row{
+      margin-top: 13%;
+      
+      @include breakpoints-up(medium){
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      }
+    }
+    .services_col{
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 80px;
+      padding-left:20px;
+
+      &-icon{
+        margin-bottom: 50px;
+        width:83px;
+        height:78px; 
+
+        .serv-desc{
+          margin: 0 auto;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
